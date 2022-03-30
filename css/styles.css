@@ -31,3 +31,32 @@ body {
 .top-bar h2 {
     font-size: 18px;
 }
+
+.bottom-bar {
+    background-color: #FFFFFF;
+    height: 92px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-bar button {
+    background-color: #CBCBCB;
+    border: none;
+    height: 60px;
+    width: 100%;
+    margin: 0 26px;
+    padding: 0 30px;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
