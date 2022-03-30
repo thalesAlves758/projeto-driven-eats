@@ -31,6 +31,70 @@ body {
 
 .top-bar h2 {
     font-size: 18px;
+    line-height: 22px;
+}
+
+.container {
+    margin: 108px 20px;
+    margin-right: 0;
+}
+
+.category > h3 {
+    color: #333333;
+    font-size: 26px;
+    margin: 18px 0;
+}
+
+.category .category-items {
+    display: flex;
+    overflow-x: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.category .category-items::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.category .category-items {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.category-items .plate-card {
+    background-color: #FFFFFF;
+    padding: 14px;
+    margin-right: 16px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+
+.category-items .plate-card img {
+    width: 144px;
+    height: 88px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.category-items .plate-card h4 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333333;
+    margin: 8px 0;
+}
+
+.category-items .plate-card p {
+    color: #A6A6A6;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+}
+
+.category-items .plate-card h5 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    margin-top: 8px;
 }
 
 .bottom-bar {
