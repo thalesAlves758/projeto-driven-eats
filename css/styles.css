@@ -152,3 +152,75 @@ body {
 .bottom-bar button:disabled {
     background-color: #CBCBCB;
 }
+
+.confirmation-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.confirmation-modal .box {
+    width: 100%;
+    margin: 0 18px;
+    background-color: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    color: #FFFFFF;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 26px 0 26px;
+}
+
+.confirmation-modal .box h2,
+.confirmation-modal .box button {
+    font-weight: bold;
+}
+
+.confirmation-modal .box ul {
+    margin: 28px 0;
+    width: 100%;
+}
+
+.confirmation-modal .box ul > li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirmation-modal .box ul > li:not(:first-child) {
+    margin-top: 14px;
+}
+
+.confirmation-modal li.total {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.confirmation-modal .box button {
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    font-size: 22px;
+    text-align: center;
+    padding: 14px 0;
+}
+
+.confirmation-modal .box button.confirm {
+    background-color: #FFFFFF;
+    color: #50D074;
+    border-radius: 100px;
+}
+
+.confirmation-modal .box button.cancel {
+    color: #FFFFFF;
+    font-size: 20px;
+}
