@@ -24,7 +24,7 @@
             <h3 class="righteous-font">Primeiro, seu prato</h3>
 
             <div class="category-items plates">
-                <div class="product-card" onclick="selectProduct(this)">
+                <div class="product-card" onclick="selectProduct(this, 'plates')">
                     <img src="images/frango-yin-yang.jpg" alt="Frango Yin Yang">
                     <h4>Frango Yin Yang</h4>
                     <p>Um pouco de batata Um pouco de salada</p>
@@ -33,7 +33,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="product-card" onclick="selectProduct(this)">
+                <div class="product-card" onclick="selectProduct(this, 'plates')">
                     <img src="images/frango-yin-yang.jpg" alt="Frango Yin Yang">
                     <h4>Frango Yin Yang</h4>
                     <p>Um pouco de batata Um pouco de salada</p>
@@ -42,7 +42,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="product-card" onclick="selectProduct(this)">
+                <div class="product-card" onclick="selectProduct(this, 'plates')">
                     <img src="images/frango-yin-yang.jpg" alt="Frango Yin Yang">
                     <h4>Frango Yin Yang</h4>
                     <p>Um pouco de batata Um pouco de salada</p>
@@ -57,7 +57,7 @@
             <h3 class="righteous-font">Agora, sua bebida</h3>
 
             <div class="category-items drinks">
-                <div class="product-card">
+                <div class="product-card" onclick="selectProduct(this, 'drinks')">
                     <img src="images/coquinha-gelada.jpg" alt="Coquinha gelada">
                     <h4>Coquinha gelada</h4>
                     <p>Lata 350ml</p>
@@ -66,7 +66,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" onclick="selectProduct(this, 'drinks')">
                     <img src="images/coquinha-gelada.jpg" alt="Coquinha gelada">
                     <h4>Coquinha gelada</h4>
                     <p>Lata 350ml</p>
@@ -75,7 +75,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" onclick="selectProduct(this, 'drinks')">
                     <img src="images/coquinha-gelada.jpg" alt="Coquinha gelada">
                     <h4>Coquinha gelada</h4>
                     <p>Lata 350ml</p>
@@ -90,7 +90,7 @@
             <h3 class="righteous-font">Por fim, sua sobremesa</h3>
 
             <div class="category-items desserts">
-                <div class="product-card">
+                <div class="product-card" onclick="selectProduct(this, 'desserts')">
                     <img src="images/pudim.jpg" alt="Pudim">
                     <h4>Pudim</h4>
                     <p>Apenas pudim</p>
@@ -99,7 +99,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" onclick="selectProduct(this, 'desserts')">
                     <img src="images/pudim.jpg" alt="Pudim">
                     <h4>Pudim</h4>
                     <p>Apenas pudim</p>
@@ -108,7 +108,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" onclick="selectProduct(this, 'desserts')">
                     <img src="images/pudim.jpg" alt="Pudim">
                     <h4>Pudim</h4>
                     <p>Apenas pudim</p>
@@ -161,5 +161,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="js/scripts.js"></script>
 </body>
 </html>
