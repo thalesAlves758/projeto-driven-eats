@@ -23,8 +23,8 @@
         <div class="category">
             <h3 class="righteous-font">Primeiro, seu prato</h3>
 
-            <div class="category-items">
-                <div class="plate-card selected">
+            <div class="category-items plates">
+                <div class="product-card" onclick="selectProduct(this)">
                     <img src="images/frango-yin-yang.jpg" alt="Frango Yin Yang">
                     <h4>Frango Yin Yang</h4>
                     <p>Um pouco de batata Um pouco de salada</p>
@@ -33,7 +33,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="plate-card">
+                <div class="product-card" onclick="selectProduct(this)">
                     <img src="images/frango-yin-yang.jpg" alt="Frango Yin Yang">
                     <h4>Frango Yin Yang</h4>
                     <p>Um pouco de batata Um pouco de salada</p>
@@ -42,7 +42,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="plate-card">
+                <div class="product-card" onclick="selectProduct(this)">
                     <img src="images/frango-yin-yang.jpg" alt="Frango Yin Yang">
                     <h4>Frango Yin Yang</h4>
                     <p>Um pouco de batata Um pouco de salada</p>
@@ -56,8 +56,8 @@
         <div class="category">
             <h3 class="righteous-font">Agora, sua bebida</h3>
 
-            <div class="category-items">
-                <div class="plate-card">
+            <div class="category-items drinks">
+                <div class="product-card">
                     <img src="images/coquinha-gelada.jpg" alt="Coquinha gelada">
                     <h4>Coquinha gelada</h4>
                     <p>Lata 350ml</p>
@@ -66,7 +66,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="plate-card selected">
+                <div class="product-card">
                     <img src="images/coquinha-gelada.jpg" alt="Coquinha gelada">
                     <h4>Coquinha gelada</h4>
                     <p>Lata 350ml</p>
@@ -75,7 +75,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="plate-card">
+                <div class="product-card">
                     <img src="images/coquinha-gelada.jpg" alt="Coquinha gelada">
                     <h4>Coquinha gelada</h4>
                     <p>Lata 350ml</p>
@@ -89,8 +89,8 @@
         <div class="category">
             <h3 class="righteous-font">Por fim, sua sobremesa</h3>
 
-            <div class="category-items">
-                <div class="plate-card">
+            <div class="category-items desserts">
+                <div class="product-card">
                     <img src="images/pudim.jpg" alt="Pudim">
                     <h4>Pudim</h4>
                     <p>Apenas pudim</p>
@@ -99,7 +99,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="plate-card">
+                <div class="product-card">
                     <img src="images/pudim.jpg" alt="Pudim">
                     <h4>Pudim</h4>
                     <p>Apenas pudim</p>
@@ -108,7 +108,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="plate-card selected">
+                <div class="product-card">
                     <img src="images/pudim.jpg" alt="Pudim">
                     <h4>Pudim</h4>
                     <p>Apenas pudim</p>
@@ -126,11 +126,11 @@
         </button>
     </div>
 
-    <div class="confirmation-modal">
+    <div class="confirmation-modal hidden">
         <div class="box">
             <h2>Confirme seu pedido</h2>
 
-            <ul class="items">
+            <ul>
                 <li>
                     <h3>Frango Yin Yang</h3>
                     <h4>14,90</h4>

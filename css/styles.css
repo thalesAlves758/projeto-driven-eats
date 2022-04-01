@@ -5,10 +5,6 @@ body {
     background-color: #E5E5E5;
 }
 
-.righteous-font {
-    font-family: 'Righteous', cursive;
-}
-
 .top-bar {
     font-weight: 400;
     height: 92px;
@@ -60,12 +56,12 @@ body {
     scrollbar-width: none;  /* Firefox */
 }
 
-.category-items .plate-card:first-child,
+.category-items .product-card:first-child,
 .category > h3 {
     margin-left: 16px;
 }
 
-.category-items .plate-card {
+.category-items .product-card {
     background-color: #FFFFFF;
     padding: 14px;
     margin-right: 16px;
@@ -75,7 +71,7 @@ body {
     position: relative;
 }
 
-.category-items .plate-card ion-icon {
+.category-items .product-card ion-icon {
     display: none;
     position: absolute;
     bottom: 10px;
@@ -84,36 +80,36 @@ body {
     font-size: 16px;
 }
 
-.plate-card.selected {
+.product-card.selected {
     box-shadow: inset 0px 0px 0px 5px #32B72F;
 }
 
-.plate-card.selected ion-icon {
+.product-card.selected ion-icon {
     display: inline;
 }
 
-.category-items .plate-card img {
+.category-items .product-card img {
     width: 144px;
     height: 88px;
     border-radius: 4px;
     object-fit: cover;
 }
 
-.category-items .plate-card h4 {
+.category-items .product-card h4 {
     font-weight: bold;
     font-size: 16px;
     color: #333333;
     margin: 8px 0;
 }
 
-.category-items .plate-card p {
+.category-items .product-card p {
     color: #A6A6A6;
     font-size: 14px;
     font-weight: 300;
     line-height: 18px;
 }
 
-.category-items .plate-card h5 {
+.category-items .product-card h5 {
     font-weight: 400;
     font-size: 16px;
     color: #000000;
@@ -164,7 +160,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
 }
 
 .confirmation-modal .box {
@@ -223,4 +218,12 @@ body {
 .confirmation-modal .box button.cancel {
     color: #FFFFFF;
     font-size: 20px;
+}
+
+.righteous-font {
+    font-family: 'Righteous', cursive;
+}
+
+.hidden {
+    display: none;
 }
