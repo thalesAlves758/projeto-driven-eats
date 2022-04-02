@@ -39,3 +39,11 @@ function enableFinishPurchaseButton() {
     finishPurchaseButton.innerHTML = "Fechar pedido";
     finishPurchaseButton.disabled = false;
 }
+
+function finishPurchase() {
+    toggleConfirmModal();
+}
+
+function toggleConfirmModal() {
+    document.querySelector('.confirmation-modal').classList.toggle('hidden');
+}
