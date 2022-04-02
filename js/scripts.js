@@ -2,6 +2,9 @@ let selectedPlate;
 let selectedDrink;
 let selectedDessert;
 
+let userName;
+let userAddress;
+
 function selectPlate(plateEl) {
     if(selectedPlate) selectedPlate.classList.remove("selected");
 
@@ -40,7 +43,20 @@ function enableFinishPurchaseButton() {
     finishPurchaseButton.disabled = false;
 }
 
+function finishPurchase() {
+    userName = prompt("Digite o seu nome:");
+    userAddress = prompt("Digite o seu endereço:");
+
+    insertPurchaseIntoModal();
+
+    showConfirmModal();
+}
+
 function showConfirmModal() {
+    document.querySelector('.confirmation-modal').classList.remove('hidden');
+}
+
+function insertPurchaseIntoModal() {
     const purchaseListEl = document.querySelector('.confirmation-modal ul');
     
     const plateItemElement = getListItem(selectedPlate);
@@ -49,8 +65,6 @@ function showConfirmModal() {
     const totalItemElement = getTotalListItem();
 
     purchaseListEl.innerHTML = plateItemElement + drinkItemElement + dessertItemElement + totalItemElement;
-
-    document.querySelector('.confirmation-modal').classList.remove('hidden');
 }
 
 function getListItem(element) {
@@ -87,4 +101,18 @@ function formatToReal(value) {
 
 function hideConfirmModal() {
     document.querySelector('.confirmation-modal').classList.add('hidden');
+}
+
+function sendPurchaseToWhatsapp() {
+    const msg = "Olá, gostaria de fazer o pedido:\n" +
+    "- Prato: " + getItemName(selectedPlate) + "\n" +
+    "- Bebida: " + getItemName(selectedDrink) + "\n" +
+    "- Sobremesa: " + getItemName(selectedDessert) + "\n" +
+    "Total: " + formatToReal(getTotal()) + "\n\n" +
+    "Nome: " + userName + "\n" +
+    "Endereço: " + userAddress;
+
+    const url = 'https://wa.me/5532991003499?text=' + encodeURIComponent(msg);
+
+    window.open(url, '_blank');
 }
