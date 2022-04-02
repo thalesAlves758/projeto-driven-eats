@@ -121,7 +121,7 @@
     </div>
 
     <div class="bottom-bar">
-        <button disabled onclick="finishPurchase()">
+        <button disabled onclick="showConfirmModal()">
             Selecione os 3 itens para fechar o pedido
         </button>
     </div>
@@ -153,7 +153,7 @@
                 Tudo certo, pode pedir!
             </button>
 
-            <button class="cancel">
+            <button class="cancel" onclick="hideConfirmModal()">
                 Cancelar
             </button>
         </div>
