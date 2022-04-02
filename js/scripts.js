@@ -40,10 +40,10 @@ function enableFinishPurchaseButton() {
     finishPurchaseButton.disabled = false;
 }
 
-function finishPurchase() {
-    toggleConfirmModal();
+function showConfirmModal() {
+    document.querySelector('.confirmation-modal').classList.remove('hidden');
 }
 
-function toggleConfirmModal() {
-    document.querySelector('.confirmation-modal').classList.toggle('hidden');
+function hideConfirmModal() {
+    document.querySelector('.confirmation-modal').classList.add('hidden');
 }
