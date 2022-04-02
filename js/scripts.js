@@ -41,7 +41,48 @@ function enableFinishPurchaseButton() {
 }
 
 function showConfirmModal() {
+    const purchaseListEl = document.querySelector('.confirmation-modal ul');
+    
+    const plateItemElement = getListItem(selectedPlate);
+    const drinkItemElement = getListItem(selectedDrink);
+    const dessertItemElement = getListItem(selectedDessert);
+    const totalItemElement = getTotalListItem();
+
+    purchaseListEl.innerHTML = plateItemElement + drinkItemElement + dessertItemElement + totalItemElement;
+
     document.querySelector('.confirmation-modal').classList.remove('hidden');
+}
+
+function getListItem(element) {
+    return `<li>
+        <h3>${getItemName(element)}</h3>
+        <h4>${formatToReal(getItemPrice(element))}</h4>
+    </li>`.trim();
+}
+
+function getTotalListItem() {
+    return `<li class="total">
+        <h3>TOTAL</h3>
+        <h4>${formatToReal(getTotal())}</h4>
+    </li>`;
+}
+
+function getItemName(element) {
+    return element.querySelector('h4').innerText;
+}
+
+function getItemPrice(element) {
+    const currencyRegex = /[^0-9.-]+/g;
+
+    return Number(element.querySelector('h5').innerText.replace(currencyRegex,"")) / 100;
+}
+
+function getTotal() {
+    return getItemPrice(selectedPlate) + getItemPrice(selectedDrink) + getItemPrice(selectedDessert);
+}
+
+function formatToReal(value) {
+    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
 }
 
 function hideConfirmModal() {
