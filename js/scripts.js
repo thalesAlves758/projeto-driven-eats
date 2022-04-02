@@ -1,24 +1,41 @@
-function selectProduct(productEl, productTypeClass) {
-    const selectedElement = document.querySelector(`.${productTypeClass} .selected`);
+let selectedPlate;
+let selectedDrink;
+let selectedDessert;
 
-    if(selectedElement) selectedElement.classList.remove("selected");
+function selectPlate(plateEl) {
+    if(selectedPlate) selectedPlate.classList.remove("selected");
 
-    productEl.classList.add("selected");
-
-    checkIfCanFinishRequest();
+    selectedPlate = plateEl;
+    selectedPlate.classList.add("selected");
+    
+    checkIfCanFinishPurchase();
 }
 
-function checkIfCanFinishRequest() {
-    const plateSelected = document.querySelector('.plates .selected');
-    const drinkSelected = document.querySelector('.drinks .selected');
-    const dessertSelected = document.querySelector('.desserts .selected');
+function selectDrink(drinkEl) {
+    if(selectedDrink) selectedDrink.classList.remove("selected");
 
-    if(plateSelected && drinkSelected && dessertSelected) enableFinishRequestButton();
+    selectedDrink = drinkEl;
+    selectedDrink.classList.add("selected");
+    
+    checkIfCanFinishPurchase();
 }
 
-function enableFinishRequestButton() {
-    const finishRequestButton = document.querySelector('.bottom-bar button');
+function selectDessert(dessertEl) {
+    if(selectedDessert) selectedDessert.classList.remove("selected");
 
-    finishRequestButton.innerHTML = "Fechar pedido";
-    finishRequestButton.disabled = false;
+    selectedDessert = dessertEl;
+    selectedDessert.classList.add("selected");
+    
+    checkIfCanFinishPurchase();
+}
+
+function checkIfCanFinishPurchase() {
+    if(selectedPlate && selectedDrink && selectedDessert) enableFinishPurchaseButton();
+}
+
+function enableFinishPurchaseButton() {
+    const finishPurchaseButton = document.querySelector('.bottom-bar button');
+
+    finishPurchaseButton.innerHTML = "Fechar pedido";
+    finishPurchaseButton.disabled = false;
 }
